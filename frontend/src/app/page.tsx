@@ -4,6 +4,7 @@ import { StorySection } from "@/components/sections/story-section";
 import { FlowingMenuSection } from "@/components/sections/flowing-menu-section";
 import { ProgramsSection } from "@/components/sections/programs-section";
 import { FeaturesSection } from "@/components/sections/features-section";
+import { ScrollVelocitySection } from "@/components/sections/scroll-velocity-section";
 import { FacilityGallerySection } from "@/components/sections/facility-gallery-section";
 import { CommunitySection } from "@/components/sections/community-section";
 import { MindsetSection } from "@/components/sections/mindset-section";
@@ -13,7 +14,7 @@ import { JoinCtaSection } from "@/components/sections/join-cta-section";
 /**
  * Homepage narrative (gym product, not component demos):
  * Hero → Trust → Story → Program index → Featured programs → Features
- * → Facility gallery → Community → Mindset → Memberships → Join
+ * → Momentum banner → Facility gallery → Community → Mindset → Memberships → Join
  */
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <FlowingMenuSection />
       <ProgramsSection />
       <FeaturesSection />
+      <ScrollVelocitySection />
       <FacilityGallerySection />
       <CommunitySection />
       <MindsetSection />
