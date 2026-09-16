@@ -14,6 +14,7 @@ import {
 } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { SafeImage } from "@/components/ui/safe-image";
 
 const IMG = {
   plane:
@@ -310,8 +311,6 @@ function Card({
     </motion.div>
   );
 }
-
-import { SafeImage } from "@/components/ui/safe-image";
 
 function CardFace({
   item,

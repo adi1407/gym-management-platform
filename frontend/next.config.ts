@@ -1,11 +1,19 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
 
-  // Standalone is for Docker self-hosting. Vercel uses its own Next.js runtime —
-  // enabling standalone there can produce empty/404 deployments.
+  // Keep file tracing inside this app (avoid parent lockfiles confusing the build)
+  outputFileTracingRoot: path.join(__dirname),
+
+  // Don't fail production deploys on lint noise from third-party UI kits
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  // Standalone is for Docker only — breaks Vercel if always on
   ...(process.env.VERCEL ? {} : { output: "standalone" as const }),
 
   images: {

@@ -39,7 +39,6 @@ export function SafeImage({
   };
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
     <img
       {...props}
       src={current}
