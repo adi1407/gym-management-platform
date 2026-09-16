@@ -35,7 +35,7 @@ export function FacilityGallerySection() {
         <CircularGallery
           items={[...CIRCULAR_GALLERY]}
           bend={1}
-          textColor="#f5f5f0"
+          textColor="#ff8a45"
           borderRadius={0.05}
           scrollEase={0.05}
           scrollSpeed={2}

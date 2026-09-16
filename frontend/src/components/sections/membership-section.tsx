@@ -36,8 +36,8 @@ export function MembershipSection() {
       <div className="absolute inset-0 opacity-90">
         <SideRays
           speed={2.5}
-          rayColor1="#EAB308"
-          rayColor2="#96c8ff"
+          rayColor1="#FF5C1A"
+          rayColor2="#FF8A45"
           intensity={2}
           spread={2}
           origin="top-right"
@@ -98,7 +98,7 @@ export function MembershipSection() {
                 className={cn(
                   "group relative flex flex-col overflow-hidden rounded-2xl border p-6 backdrop-blur-md transition-shadow duration-500",
                   plan.featured
-                    ? "z-[1] border-[var(--gold)]/55 bg-white/[0.09] shadow-[0_0_50px_rgba(212,160,23,0.2)] md:-my-3 md:py-8"
+                    ? "z-[1] border-[var(--orange)]/55 bg-white/[0.09] shadow-[0_0_50px_rgba(255,92,26,0.22)] md:-my-3 md:py-8"
                     : "border-white/10 bg-black/45 hover:border-white/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.45)]",
                 )}
               >
@@ -124,7 +124,7 @@ export function MembershipSection() {
                   <div className="mb-4 flex min-h-6 items-center justify-between gap-2">
                     {plan.featured ? (
                       <motion.span
-                        className="rounded-full bg-[var(--gold)] px-2.5 py-0.5 text-[10px] font-bold tracking-[0.14em] text-black uppercase"
+                        className="rounded-full bg-[var(--orange)] px-2.5 py-0.5 text-[10px] font-bold tracking-[0.14em] text-black uppercase"
                         animate={
                           reduceMotion
                             ? undefined

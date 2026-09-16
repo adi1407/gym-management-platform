@@ -13,8 +13,8 @@ export function MindsetSection() {
     >
       <div className="relative h-[min(640px,85dvh)] w-full">
         <GhostFibers
-          lineColor="#1a1408"
-          glowColor="#D4A017"
+          lineColor="#1a0e08"
+          glowColor="#FF5C1A"
           speed={0.18}
           scale={2}
           rotation={0}
@@ -33,7 +33,7 @@ export function MindsetSection() {
           glowFalloff={10}
           glowIntensity={1.4}
           brightness={1.85}
-          blueBoost={0.85}
+          blueBoost={0.55}
           vignette={0.85}
           grain={0.05}
           dpr={1}

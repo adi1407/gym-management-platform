@@ -18,10 +18,10 @@ export function FeaturesSection() {
           height={3.5}
           baseWidth={5.5}
           scale={3.2}
-          hueShift={0.05}
-          colorFrequency={1}
+          hueShift={-0.35}
+          colorFrequency={1.1}
           noise={0.45}
-          glow={0.9}
+          glow={1.05}
         />
       </div>
 

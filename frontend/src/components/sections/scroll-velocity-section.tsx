@@ -17,7 +17,7 @@ export function ScrollVelocitySection() {
         ]}
         velocity={80}
         numCopies={4}
-        className="font-[family-name:var(--font-display)] tracking-[0.08em] text-[var(--gold)] uppercase"
+        className="font-[family-name:var(--font-display)] tracking-[0.08em] text-[var(--orange)] uppercase"
         scrollerClassName="!font-[family-name:var(--font-display)] !text-[clamp(2.5rem,8vw,5.5rem)] !leading-none !tracking-[0.06em] !font-normal"
         damping={48}
         stiffness={320}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/page-hero";
+import { ScrollVelocitySection } from "@/components/sections/scroll-velocity-section";
 import { MembershipSection } from "@/components/sections/membership-section";
 import { JoinCtaSection } from "@/components/sections/join-cta-section";
 
@@ -18,11 +19,12 @@ export default function MembershipsPage() {
           <>
             CHOOSE YOUR
             <br />
-            <span className="text-[var(--gold)]">COMMITMENT.</span>
+            <span className="text-[var(--orange)]">COMMITMENT.</span>
           </>
         }
         description="Transparent plans with gym access, classes, and assessment support. Pick the cadence that matches your goals."
       />
+      <ScrollVelocitySection />
       <MembershipSection />
       <JoinCtaSection />
     </>

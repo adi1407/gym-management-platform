@@ -7,12 +7,12 @@ import { CTA } from "@/lib/constants";
 import { JOURNEY_GALLERY } from "@/data/home";
 
 const GYM_BUBBLE_COLORS = {
-  first: "212,160,23",
-  second: "255,106,0",
-  third: "244,197,66",
-  fourth: "255,122,26",
-  fifth: "180,120,20",
-  sixth: "255,106,0",
+  first: "255,92,26",
+  second: "255,138,69",
+  third: "217,72,15",
+  fourth: "255,106,0",
+  fifth: "255,122,40",
+  sixth: "255,92,26",
 };
 
 export function JoinCtaSection() {
@@ -60,7 +60,7 @@ export function JoinCtaSection() {
             defaultIndex={2}
             expandRatio={0.52}
             trigger="hover"
-            accentColor="#d4a017"
+            accentColor="#ff5c1a"
             overlayColor="#080808"
             textColor="#f5f5f0"
             height={480}

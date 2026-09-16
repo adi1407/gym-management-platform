@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/page-hero";
 import { CommunitySection } from "@/components/sections/community-section";
+import { FacilitySpiralSection } from "@/components/sections/facility-spiral-section";
+import { ScrollVelocitySection } from "@/components/sections/scroll-velocity-section";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -18,7 +20,7 @@ export default function TransformationsPage() {
           <>
             PROGRESS
             <br />
-            <span className="text-[var(--gold)]">YOU CAN SEE.</span>
+            <span className="text-[var(--orange)]">YOU CAN SEE.</span>
           </>
         }
         description="Stories of strength, conditioning, and confidence — earned on the floor, not filtered for social."
@@ -27,7 +29,9 @@ export default function TransformationsPage() {
           Start Yours
         </Button>
       </PageHero>
+      <ScrollVelocitySection />
       <CommunitySection />
+      <FacilitySpiralSection />
     </>
   );
 }

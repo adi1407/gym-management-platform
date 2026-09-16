@@ -1,15 +1,17 @@
 :root {
-  /* Base */
+  /* Base — stay deep black */
   --black: #080808;
   --surface: #0d0d0d;
   --card: #151515;
 
-  /* Brand accents */
-  --gold: #d4a017;
-  --gold-light: #f4c542;
+  /* Brand primary — ember orange (replaces yellow gold) */
+  --orange: #ff5c1a;
+  --orange-light: #ff8a45;
+  --orange-deep: #d9480f;
 
-  --orange: #ff6a00;
-  --orange-light: #ff7a1a;
+  /* Legacy aliases → orange so existing --gold classes stay brand-correct */
+  --gold: #ff5c1a;
+  --gold-light: #ff8a45;
 
   /* Text */
   --white: #f5f5f0;
@@ -36,8 +38,8 @@
   --color-bg: var(--black);
   --color-surface: var(--surface);
   --color-card: var(--card);
-  --color-primary: var(--gold);
-  --color-primary-hover: var(--gold-light);
+  --color-primary: var(--orange);
+  --color-primary-hover: var(--orange-light);
   --color-accent: var(--orange);
   --color-accent-hover: var(--orange-light);
   --color-text: var(--white);
@@ -52,20 +54,12 @@
   --nav-height-mobile: 4.5rem;
   --nav-height-mobile-compact: 3.75rem;
 
-  /* Responsive breakpoints (mobile-first)
-     xs  phones (default)     < 480px
-     sm  large phones         ≥ 480px
-     md  tablets              ≥ 768px
-     lg  laptops              ≥ 1024px
-     xl  desktops             ≥ 1280px
-     2xl wide monitors        ≥ 1536px */
   --bp-sm: 480px;
   --bp-md: 768px;
   --bp-lg: 1024px;
   --bp-xl: 1280px;
   --bp-2xl: 1536px;
 
-  /* Fluid spacing & type — scales with viewport */
   --page-pad-x: clamp(1rem, 4vw, 3rem);
   --page-pad-y: clamp(1.5rem, 5vw, 4rem);
   --section-gap: clamp(3rem, 8vw, 7rem);
