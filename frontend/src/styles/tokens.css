@@ -1,0 +1,79 @@
+:root {
+  /* Base */
+  --black: #080808;
+  --surface: #0d0d0d;
+  --card: #151515;
+
+  /* Brand accents */
+  --gold: #d4a017;
+  --gold-light: #f4c542;
+
+  --orange: #ff6a00;
+  --orange-light: #ff7a1a;
+
+  /* Text */
+  --white: #f5f5f0;
+  --gray: #a3a3a3;
+
+  /* Borders */
+  --border: #292929;
+
+  /* Typography
+     Bebas Neue → headings, hero, numbers
+     Inter      → body, navigation, buttons, forms */
+  --font-display: "Bebas Neue", Impact, Haettenschweiler, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --font-heading: var(--font-display);
+  --font-hero: var(--font-display);
+  --font-number: var(--font-display);
+  --font-nav: var(--font-body);
+  --font-button: var(--font-body);
+  --font-form: var(--font-body);
+
+  /* Semantic color aliases */
+  --color-bg: var(--black);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-primary: var(--gold);
+  --color-primary-hover: var(--gold-light);
+  --color-accent: var(--orange);
+  --color-accent-hover: var(--orange-light);
+  --color-text: var(--white);
+  --color-text-muted: var(--gray);
+  --color-border: var(--border);
+
+  /* Navbar */
+  --nav-bg-scrolled: rgba(8, 8, 8, 0.55);
+  --nav-glass: rgba(255, 255, 255, 0.06);
+  --nav-height: 5.5rem;
+  --nav-height-compact: 4rem;
+  --nav-height-mobile: 4.5rem;
+  --nav-height-mobile-compact: 3.75rem;
+
+  /* Responsive breakpoints (mobile-first)
+     xs  phones (default)     < 480px
+     sm  large phones         ≥ 480px
+     md  tablets              ≥ 768px
+     lg  laptops              ≥ 1024px
+     xl  desktops             ≥ 1280px
+     2xl wide monitors        ≥ 1536px */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+
+  /* Fluid spacing & type — scales with viewport */
+  --page-pad-x: clamp(1rem, 4vw, 3rem);
+  --page-pad-y: clamp(1.5rem, 5vw, 4rem);
+  --section-gap: clamp(3rem, 8vw, 7rem);
+  --content-max: 80rem;
+
+  --text-body: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  --text-lead: clamp(1.05rem, 1rem + 0.35vw, 1.25rem);
+  --text-h1: clamp(2.5rem, 1.6rem + 4vw, 5.5rem);
+  --text-h2: clamp(1.75rem, 1.2rem + 2.2vw, 3.25rem);
+  --text-h3: clamp(1.25rem, 1.05rem + 1vw, 1.75rem);
+}
