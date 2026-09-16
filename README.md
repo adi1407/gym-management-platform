@@ -32,7 +32,30 @@ docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 | Backend  | http://localhost:4000 |
 | Postgres | localhost:5432        |
 
-## Frontend Architecture
+## Deploy to Vercel (frontend)
+
+This repo is a **monorepo**. The Next.js app is inside `frontend/`, not the repo root.
+
+If you see **404 NOT_FOUND** on Vercel, Root Directory is almost certainly wrong.
+
+### Fix in Vercel Dashboard
+
+1. Open your project → **Settings** → **General**
+2. **Root Directory** → set to `frontend` → Save
+3. **Framework Preset** → Next.js
+4. **Build Command** → `npm run build` (default)
+5. **Install Command** → `npm install` or `npm ci`
+6. **Output Directory** → leave **empty** (do not set `.next`)
+7. **Deployments** → … on latest → **Redeploy** (clear cache if available)
+
+### Or via CLI
+
+```bash
+cd frontend
+npx vercel --prod
+```
+
+Backend (`backend/`) is separate — deploy it to Railway / Render / Fly, not as the Vercel web app.
 
 ```
 frontend/src/
