@@ -1,8 +1,8 @@
 "use client";
 
-import InfiniteSpiral from "@/components/InfiniteSpiral";
+import CircularGallery from "@/components/CircularGallery";
 import { Button } from "@/components/ui/button";
-import { FACILITY_SPIRAL } from "@/data/home";
+import { CIRCULAR_GALLERY } from "@/data/home";
 
 export function FacilityGallerySection() {
   return (
@@ -12,7 +12,7 @@ export function FacilityGallerySection() {
       aria-labelledby="gallery-heading"
     >
       <div className="px-[var(--page-pad-x)] pt-[var(--section-gap)] pb-8">
-        <div className="container-page mx-auto max-w-[var(--content-max)] text-center">
+        <div className="container-page mx-auto text-center">
           <p className="mb-3 text-xs font-semibold tracking-[0.3em] text-[var(--gold)] uppercase">
             The floor
           </p>
@@ -25,28 +25,22 @@ export function FacilityGallerySection() {
             <span className="text-[var(--gold)]">SERIOUS TRAINING.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[var(--gray)] md:text-base">
-            Strength racks, free weights, conditioning tools, and recovery space
-            — drag or scroll the spiral to explore the facility.
+            Drag, scroll, or use arrow keys — orbit through every zone on the
+            floor, from racks to recovery.
           </p>
         </div>
       </div>
 
-      <div className="relative h-[min(560px,75dvh)] w-full overflow-hidden">
-        <InfiniteSpiral
-          items={FACILITY_SPIRAL}
-          animationMode="all"
-          speed={0.55}
-          radius={200}
-          cardWidth={160}
-          cardHeight={200}
-          verticalSpacing={72}
-          perspective={1100}
-          cardRadius={12}
-          centerScale={1.25}
-          edgeBlur={4}
-          cardsPerTurn={7}
-          grayscale={0}
-          pauseOnHover
+      <div className="relative h-[min(600px,70dvh)] w-full">
+        <CircularGallery
+          items={[...CIRCULAR_GALLERY]}
+          bend={1}
+          textColor="#f5f5f0"
+          borderRadius={0.05}
+          scrollEase={0.05}
+          scrollSpeed={2}
+          fontUrl="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          font="bold 30px Bebas Neue"
         />
       </div>
 
@@ -55,7 +49,7 @@ export function FacilityGallerySection() {
           Book a Tour
         </Button>
         <Button href="/locations" variant="outline" size="md">
-          Full Gallery
+          Locations
         </Button>
       </div>
     </section>

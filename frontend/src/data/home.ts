@@ -349,6 +349,22 @@ export const FACILITY_SPIRAL: InfiniteSpiralItem[] = [
   { src: IMG.athlete, alt: "Athlete training" },
 ];
 
+/** Circular orbit gallery — facility zones */
+export const CIRCULAR_GALLERY = [
+  { image: IMG.floor, text: "Training Floor" },
+  { image: IMG.racks, text: "Strength Racks" },
+  { image: IMG.dumbbells, text: "Free Weights" },
+  { image: IMG.group, text: "Group Training" },
+  { image: IMG.class, text: "Coach-Led Class" },
+  { image: IMG.rope, text: "Conditioning" },
+  { image: IMG.kettle, text: "Kettlebells" },
+  { image: IMG.machines, text: "Machine Circuit" },
+  { image: IMG.yoga, text: "Mobility Lab" },
+  { image: IMG.athlete, text: "Performance" },
+  { image: IMG.boxing, text: "Combat Zone" },
+  { image: IMG.squat, text: "Barbell Bay" },
+] as const;
+
 /** Member journey steps — AccordionGallery on Join CTA */
 export const JOURNEY_GALLERY = [
   {
