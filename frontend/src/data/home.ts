@@ -220,11 +220,13 @@ export const FEATURES = [
 
 export const MEMBERSHIP_PLANS = [
   {
+    slug: "monthly",
     name: "Monthly",
     price: "₹2,499",
     period: "/mo",
     note: "Flexible start",
-    href: "/join",
+    href: "/join?package=monthly",
+    durationDays: 30,
     featured: false,
     savings: null,
     features: [
@@ -235,11 +237,13 @@ export const MEMBERSHIP_PLANS = [
     ],
   },
   {
+    slug: "quarterly",
     name: "Quarterly",
     price: "₹6,499",
     period: "/qtr",
     note: "Most popular",
-    href: "/join",
+    href: "/join?package=quarterly",
+    durationDays: 90,
     featured: true,
     savings: "Save ~13%",
     features: [
@@ -250,11 +254,13 @@ export const MEMBERSHIP_PLANS = [
     ],
   },
   {
+    slug: "yearly",
     name: "Yearly",
     price: "₹21,999",
     period: "/yr",
     note: "Best value",
-    href: "/join",
+    href: "/join?package=yearly",
+    durationDays: 365,
     featured: false,
     savings: "Save ~27%",
     features: [

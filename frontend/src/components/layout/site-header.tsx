@@ -66,18 +66,10 @@ export function SiteHeader() {
             <div className="relative z-10 flex items-center justify-self-end gap-2">
               <div className="hidden items-center gap-2 lg:flex">
                 <Button
-                  href={CTA.login.href}
-                  variant="ghost"
-                  size="sm"
-                  className="text-white hover:text-white/80"
-                >
-                  {CTA.login.label}
-                </Button>
-                <Button
                   href={CTA.join.href}
                   variant="primary"
                   size="sm"
-                  className="shadow-[0_0_24px_rgba(255,106,0,0.25)]"
+                  className="shadow-[0_0_24px_rgba(255,92,26,0.25)]"
                 >
                   {CTA.join.label}
                 </Button>

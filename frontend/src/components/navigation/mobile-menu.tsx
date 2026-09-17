@@ -121,14 +121,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             <Button href={CTA.join.href} variant="primary" size="lg" className="w-full">
               {CTA.join.label}
             </Button>
-            <Button
-              href={CTA.login.href}
-              variant="ghost"
-              size="md"
-              className="w-full text-white"
-            >
-              {CTA.login.label}
-            </Button>
           </div>
         </motion.div>
       )}

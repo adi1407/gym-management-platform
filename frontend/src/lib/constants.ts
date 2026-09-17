@@ -10,9 +10,10 @@ export const ROUTES = {
   transformations: "/transformations",
   blog: "/blog",
   join: "/join",
-  login: "/login",
   contact: "/contact",
   faq: "/faq",
+  admin: "/admin",
+  adminLogin: "/admin/login",
 } as const;
 
 export type NavLink = {
@@ -31,5 +32,4 @@ export const NAV_LINKS: NavLink[] = [
 
 export const CTA = {
   join: { label: "Join Now", href: ROUTES.join },
-  login: { label: "Login", href: ROUTES.login },
 } as const;

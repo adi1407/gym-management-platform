@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { fontBody, fontDisplay } from "@/config/fonts";
 import { SiteShell } from "@/components/layout/site-shell";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${fontDisplay.variable} ${fontBody.variable} antialiased`}>
         <SiteShell>{children}</SiteShell>
+        <Toaster />
       </body>
     </html>
   );

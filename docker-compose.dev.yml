@@ -2,16 +2,6 @@
 #   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
 
 services:
-  backend:
-    build:
-      target: development
-    command: npm run dev
-    volumes:
-      - ./backend/src:/app/src
-      - /app/node_modules
-    environment:
-      NODE_ENV: development
-
   frontend:
     build:
       target: development
