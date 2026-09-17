@@ -190,6 +190,17 @@ export type Database = {
     Functions: {
       is_admin: { Args: Record<string, never>; Returns: boolean };
       sync_membership_status: { Args: Record<string, never>; Returns: undefined };
+      book_trial_visit: {
+        Args: {
+          p_package_slug: string;
+          p_visit_date: string;
+          p_visit_time: string;
+          p_full_name: string;
+          p_email: string;
+          p_phone: string;
+        };
+        Returns: string;
+      };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;
