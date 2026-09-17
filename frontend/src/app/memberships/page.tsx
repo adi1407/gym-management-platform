@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/page-hero";
+import { Button } from "@/components/ui/button";
 import { ScrollVelocitySection } from "@/components/sections/scroll-velocity-section";
-import { MembershipSection } from "@/components/sections/membership-section";
 import { JoinCtaSection } from "@/components/sections/join-cta-section";
+import { MembershipPlansDetailed } from "@/components/memberships/membership-plans-detailed";
+import { MembershipIncludes } from "@/components/memberships/membership-includes";
+import { MembershipCompare } from "@/components/memberships/membership-compare";
+import { MembershipSteps } from "@/components/memberships/membership-steps";
+import { MembershipFaq } from "@/components/memberships/membership-faq";
 
 export const metadata: Metadata = {
   title: "Memberships",
   description:
-    "Choose monthly, quarterly, or yearly Evolution Gym memberships — clear pricing, full floor access.",
+    "Compare monthly, quarterly, and yearly Evolution Gym memberships — full floor access, classes, free visit booking.",
 };
 
 export default function MembershipsPage() {
@@ -17,15 +22,29 @@ export default function MembershipsPage() {
         eyebrow="Memberships"
         title={
           <>
-            CHOOSE YOUR
+            TRAIN ON YOUR
             <br />
-            <span className="text-[var(--orange)]">COMMITMENT.</span>
+            <span className="text-[var(--orange)]">TERMS.</span>
           </>
         }
-        description="Transparent plans with gym access, classes, and assessment support. Pick the cadence that matches your goals."
-      />
+        description="Transparent pricing. Full gym access on every plan. Book a free 1-day visit, then choose the commitment that matches your goals."
+      >
+        <div className="flex flex-wrap gap-3">
+          <Button href="/join" variant="primary" size="md">
+            Book free visit
+          </Button>
+          <Button href="#compare" variant="outline" size="md">
+            Compare plans
+          </Button>
+        </div>
+      </PageHero>
+
+      <MembershipIncludes />
+      <MembershipPlansDetailed />
+      <MembershipCompare />
+      <MembershipSteps />
       <ScrollVelocitySection />
-      <MembershipSection />
+      <MembershipFaq />
       <JoinCtaSection />
     </>
   );

@@ -107,7 +107,7 @@ export function MembershipSection() {
                     className="pointer-events-none absolute -inset-px rounded-2xl"
                     style={{
                       background:
-                        "linear-gradient(120deg, transparent, rgba(212,160,23,0.45), transparent)",
+                        "linear-gradient(120deg, transparent, rgba(255,92,26,0.45), transparent)",
                       backgroundSize: "200% 100%",
                     }}
                     animate={{ backgroundPosition: ["0% 0%", "200% 0%"] }}
@@ -219,7 +219,7 @@ export function MembershipSection() {
                           "shadow-[0_0_28px_rgba(255,106,0,0.35)]",
                       )}
                     >
-                      Choose Plan
+                      Book free visit
                     </Button>
                   </motion.div>
                 </div>
