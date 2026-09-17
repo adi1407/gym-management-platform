@@ -62,30 +62,30 @@ export async function createTrialBooking(input: {
     return { ok: false, error: "Selected package is unavailable." };
   }
 
-  const { data, error } = await supabase
-    .from("trial_bookings")
-    .insert({
-      package_id: pkg.id,
-      visit_date: visitDate,
-      visit_time: visitTime,
-      full_name: fullName,
-      email,
-      phone,
-      status: "new",
-    })
-    .select("id")
-    .single();
+  // Insert only — no .select(). Anon RLS allows INSERT but not SELECT;
+  // returning the row would fail with a misleading RLS error.
+  const { error } = await supabase.from("trial_bookings").insert({
+    package_id: pkg.id,
+    visit_date: visitDate,
+    visit_time: visitTime,
+    full_name: fullName,
+    email,
+    phone,
+    status: "new",
+  });
 
   if (error) {
-    console.error(error);
+    console.error("createTrialBooking", error);
     return {
       ok: false,
       error:
-        "Could not save your booking. Check Supabase setup, or try again shortly.",
+        error.message?.includes("JWT") || error.code === "PGRST301"
+          ? "Supabase is not configured. Check NEXT_PUBLIC_SUPABASE_URL and anon key."
+          : "Could not save your booking. Check Supabase setup, or try again shortly.",
     };
   }
 
   revalidatePath("/admin/trials");
   revalidatePath("/admin");
-  return { ok: true, id: data.id };
+  return { ok: true };
 }

@@ -127,9 +127,13 @@ create policy packages_admin_all on public.packages
   for all using (public.is_admin()) with check (public.is_admin());
 
 -- Trial bookings: public insert; admin full access
+-- IMPORTANT: do NOT add a public SELECT policy (exposes leads).
+-- The app inserts without .select() because RETURNING needs SELECT under RLS.
 drop policy if exists trial_bookings_public_insert on public.trial_bookings;
 create policy trial_bookings_public_insert on public.trial_bookings
-  for insert with check (true);
+  for insert
+  to anon, authenticated
+  with check (true);
 
 drop policy if exists trial_bookings_admin_all on public.trial_bookings;
 create policy trial_bookings_admin_all on public.trial_bookings
